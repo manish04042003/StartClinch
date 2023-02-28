@@ -1,0 +1,18 @@
+.Loding{
+    /* max-width: 700px; */
+    width: 100%;
+background-color: #F8F9FF;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90vh;
+flex-direction: column;
+}
+.Loding img{
+    width: 80%;
+    max-width: 700px;
+    /* margin: auto; */
+}
+.Loding h3{
+    font-size: 2rem;
+}
