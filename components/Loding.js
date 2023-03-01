@@ -7,7 +7,7 @@ function Loding() {
   return (
     <div className='Loding'>
       <img src={lodingImage} alt="lodingimage" />
-      <h3>Good things come to those who wait...</h3>
+      <p className='medium'>Good things come to those who wait...</p>
     </div>
   )
 }

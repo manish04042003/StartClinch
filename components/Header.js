@@ -8,9 +8,9 @@ function Header() {
     <div className="Header">
       <div className="Header_child">
         <div className="logo_div">
-          <img src={logo} alt="" /> <h1>StarClinch</h1>
+          <img src={logo} alt="" /> <p className="medium">StarClinch</p>
         </div>
-        <div className="user_name"><h3>Hello Manish</h3></div>
+        <div className="user_name"><p className="small">Hello, Manish</p></div>
       </div>
     </div>
   );

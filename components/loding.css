@@ -5,14 +5,15 @@ background-color: #F8F9FF;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 90vh;
+min-height: 90vh;
 flex-direction: column;
+padding: 1rem;
 }
 .Loding img{
     width: 80%;
     max-width: 700px;
     /* margin: auto; */
 }
-.Loding h3{
-    font-size: 2rem;
+.Loding p{
+    text-align: center;
 }
