@@ -3,7 +3,7 @@
   width: 321px;
   background-color: black;
   border-radius: 30px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   /* border: 2px solid black; */
   /* box-sizing: content-box; */
 }
@@ -77,6 +77,7 @@ height: 236px;
     position: relative;
     bottom: 30px;
     border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 .slected_activeBTN{
     background-color:rgba(255, 255, 255, 0.5);

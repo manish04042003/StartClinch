@@ -6,6 +6,12 @@
 .SingersHeading{
     font-size: 2.5rem;
     text-align: center;
+    margin-bottom: 1rem;
+}
+.SingersHeading1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 .mediumHeading{
     font-size: 1.6rem;
@@ -19,7 +25,17 @@ font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
+.details_div>div{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .details_div>div>*{
     margin-bottom: 7px;
 }
@@ -29,4 +45,27 @@ font-size: 1.2rem;
     border-radius: 10px;
     padding: 10px;
 
+}
+.textmaxwidth{
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .SingersHeading{
+        text-align: left;
+    }
+    .details_div{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 12px;
+    }
+    .budget_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .textmaxwidth{
+        max-width: 250px;
+
+    }
 }

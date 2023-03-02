@@ -26,31 +26,42 @@ function Singers() {
         setdata(response.d);
         console.log(response.d);
         setflag(false);
-      
       })
       .catch((err) => console.error(err));
     console.log("useeffect");
   }, []);
 
-  useEffect(()=>{
-  const thumbnailImages = document.getElementsByClassName("thumbnail");
+  useEffect(() => {
+    const thumbnailImages = document.getElementsByClassName("thumbnail");
 
-  // Add a click event listener to each thumbnail image
-  for (let i = 0; i < thumbnailImages.length; i++) {
-    console.log("enter in for loop");
-    thumbnailImages[i].addEventListener("click", function () {
-      // Set the main image's source to the clicked thumbnail's source
-      console.log("click");
-      const mainImage =
-        this.closest(".SingerCard").querySelector(".main-image");
-      mainImage.src = this.src;
-    });
-  }
+    // Add a click event listener to each thumbnail image
+    for (let i = 0; i < thumbnailImages.length; i++) {
+      console.log("enter in for loop");
+      thumbnailImages[i].addEventListener("click", function () {
+        // Set the main image's source to the clicked thumbnail's source
+        console.log("click");
+        const mainImage =
+          this.closest(".SingerCard").querySelector(".main-image");
+        mainImage.src = this.src;
+      });
+    }
 
-  },[data])
+    let AllBTN = document.getElementsByClassName("selectBTN");
+    for (let i = 0; i < AllBTN.length; i++) {
+      AllBTN[i].addEventListener("click", function () {
+        console.log("click");
+        this.closest(".selectBTN").classList.toggle("slected_activeBTN");
+        let pText = this.closest(".selectBTN").querySelector('#text');
+        if (pText.innerHTML == "SELECT") {
+          pText.innerHTML = 'SELECTED'
+        } else {
+          pText.innerHTML = "SELECT"
+        }
+      });
+    }
+  }, [data]);
 
   console.log("render");
-
 
   return flag ? (
     <Loding />
@@ -67,7 +78,7 @@ function Singers() {
           <p className="mediumHeading">Location</p>
           <p className="smallHeading"> Delhi, India</p>
         </div>
-        <div>
+        <div className="budget_div">
           <p className="mediumHeading">Budget</p>
           <div className="budget_tag">
             <p className="mediumHeading">₹500,000</p>
@@ -76,15 +87,15 @@ function Singers() {
       </div>
 
       <center>
-        <h1 className="SingersHeading">Singers</h1>
-        <p className="medium">Select an artist that matches your vibe.</p>
+        <h1 className="SingersHeading1">Singers</h1>
+        <p className="medium textmaxwidth">Select an artist that matches your vibe.</p>
       </center>
 
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
         }}
       >
         {data.map((ele) => {
