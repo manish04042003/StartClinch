@@ -4,11 +4,11 @@ import "../components/Singers.css";
 import SingerCard from "./SingerCard";
 
 const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "7fc3cf9835mshaf0bc5ef9add64dp18c442jsn6de6aab07b8f",
-    "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
-  },
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '201d922ca8msh0eb20de7c53f690p120541jsne64d81f34302',
+		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+	}
 };
 
 // Get references to all of the main images and thumbnail images
@@ -24,11 +24,11 @@ function Singers() {
       .then((response) => response.json())
       .then((response) => {
         setdata(response.d);
-        console.log(response.d);
+        // console.log(response.d);
         setflag(false);
       })
       .catch((err) => console.error(err));
-    console.log("useeffect");
+    // console.log("useeffect");
   }, []);
 
   useEffect(() => {
@@ -36,10 +36,10 @@ function Singers() {
 
     // Add a click event listener to each thumbnail image
     for (let i = 0; i < thumbnailImages.length; i++) {
-      console.log("enter in for loop");
+      // console.log("enter in for loop");
       thumbnailImages[i].addEventListener("click", function () {
         // Set the main image's source to the clicked thumbnail's source
-        console.log("click");
+        // console.log("click");
         const mainImage =
           this.closest(".SingerCard").querySelector(".main-image");
         mainImage.src = this.src;
@@ -49,7 +49,7 @@ function Singers() {
     let AllBTN = document.getElementsByClassName("selectBTN");
     for (let i = 0; i < AllBTN.length; i++) {
       AllBTN[i].addEventListener("click", function () {
-        console.log("click");
+        // console.log("click");
         this.closest(".selectBTN").classList.toggle("slected_activeBTN");
         let pText = this.closest(".selectBTN").querySelector('#text');
         if (pText.innerHTML == "SELECT") {
@@ -61,7 +61,7 @@ function Singers() {
     }
   }, [data]);
 
-  console.log("render");
+  // console.log("render");
 
   return flag ? (
     <Loding />
@@ -98,8 +98,8 @@ function Singers() {
           justifyContent: "space-around",
         }}
       >
-        {data.map((ele) => {
-          console.log(ele.s);
+        {data?.map((ele) => {
+          // console.log(ele.s);
           return (
             <SingerCard
               key={ele.id}

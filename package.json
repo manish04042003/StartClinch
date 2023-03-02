@@ -2,9 +2,10 @@
   "name": "startclinch",
   "version": "1.0.0",
   "description": "this is a task for my job",
-  "main": "index.js",
+
   "scripts": {
-    "test": "start"
+    "test": "start",
+    "build": "npx parcel build index.html"
   },
   "author": "",
   "license": "ISC",
